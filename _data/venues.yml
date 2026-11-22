@@ -1,0 +1,28 @@
+"CMC":
+  url: https://www.techscience.com/journal/cmc
+  color: "#0b5394"
+
+"IM":
+  url: https://www.businessperspectives.org/index.php/journals/innovative-marketing
+  color: "#2e7d32"
+
+"JDS":
+  url: https://accesson.kr/jds
+  color: "#6a1b9a"
+
+"MSJ":
+  url: https://malque.pub/ojs/index.php/msj
+  color: "#c62828"
+
+"Springer":
+  url: https://link.springer.com/
+  color: "#e65100"
+
+"JST":
+  color: "#455a64"
+
+"ICACE":
+  color: "#00838f"
+
+"Textbook":
+  color: "#795548"
