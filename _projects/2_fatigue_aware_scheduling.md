@@ -2,7 +2,7 @@
 layout: page
 title: Fatigue-aware scheduling
 description: Treating rest as a decision in flexible job shops (in progress)
-importance: 2
+importance: 3
 category: scheduling
 ---
 

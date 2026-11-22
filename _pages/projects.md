@@ -1,6 +1,6 @@
 ---
 layout: page
-title: research
+title: Research
 permalink: /research/
 description: Research projects in optimization, scheduling and operations.
 nav: true
