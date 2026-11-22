@@ -1,0 +1,367 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }}
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/*******************************************************************************
+ * Custom design — Vo Thi Hoang Quanh
+ * Burgundy palette, Inter + Source Serif typography, sidebar profile layout.
+ ******************************************************************************/
+
+:root {
+  --global-theme-color: #8b1e3f;
+  --global-hover-color: #6d1631;
+  --global-highlight-color: #8b1e3f;
+  --global-text-color: #2b2b2e;
+  --global-text-color-light: #6b6b73;
+  --global-divider-color: rgba(139, 30, 63, 0.14);
+  --global-footer-bg-color: #3a0f1d;
+  --q-accent-soft: #f8eef1;
+  --q-card-border: #eadde1;
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #e88aa5;
+  --global-hover-color: #f2a9bd;
+  --global-highlight-color: #e88aa5;
+  --global-bg-color: #1c1a1c;
+  --global-card-bg-color: #262326;
+  --global-text-color: #e8e4e6;
+  --global-divider-color: rgba(232, 138, 165, 0.2);
+  --global-footer-bg-color: #2a1a20;
+  --global-footer-text-color: #d9cdd1;
+  --global-footer-link-color: #ffffff;
+  --q-accent-soft: #2d2226;
+  --q-card-border: #3a2e33;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+.post-title,
+.page-title,
+.card-title {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: saturate(180%) blur(8px);
+  background-color: color-mix(in srgb, var(--global-bg-color) 88%, transparent) !important;
+  border-bottom: 1px solid var(--global-divider-color);
+  box-shadow: none !important;
+}
+.navbar .navbar-brand.title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600 !important;
+  color: var(--global-theme-color) !important;
+}
+.navbar .nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+/* Page headers on inner pages */
+.post-header .post-title {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+.post-header .post-description,
+.post-header .desc {
+  color: var(--global-text-color-light);
+}
+
+/* Footer */
+footer.fixed-bottom,
+footer.sticky-bottom {
+  font-size: 0.8rem;
+}
+
+/* ---------- About page: sidebar profile ---------- */
+.q-profile-page {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.q-sidebar {
+  position: sticky;
+  top: 5.5rem;
+  text-align: center;
+  padding: 2rem 1.5rem 1.75rem;
+  border: 1px solid var(--q-card-border);
+  border-radius: 18px;
+  background: var(--global-card-bg-color);
+  box-shadow: 0 10px 30px -18px rgba(139, 30, 63, 0.35);
+}
+.q-sidebar::before {
+  content: "";
+  display: block;
+  height: 6px;
+  margin: -2rem -1.5rem 1.75rem;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, #5e1229, var(--global-theme-color), #c0506f);
+}
+.q-avatar {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--global-card-bg-color);
+  box-shadow: 0 0 0 2px var(--global-theme-color);
+}
+.q-avatar img,
+.q-avatar picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 50%;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+.q-name {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 0.2rem;
+  color: var(--global-text-color);
+}
+.q-name-vi {
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.9rem;
+}
+.q-role {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.q-role a {
+  color: var(--global-text-color);
+}
+.q-role a:hover {
+  color: var(--global-theme-color);
+}
+.q-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 1.2rem;
+}
+.q-tags span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  color: var(--global-theme-color);
+  background: var(--q-accent-soft);
+}
+.q-sidebar .social {
+  padding: 0;
+  margin: 0;
+}
+.q-sidebar .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.15rem 0.7rem;
+  font-size: 1.35rem !important;
+}
+.q-sidebar .contact-icons a {
+  color: var(--global-text-color-light);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.q-sidebar .contact-icons a:hover {
+  color: var(--global-theme-color);
+  transform: translateY(-2px);
+}
+.q-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: #fff !important;
+  background: var(--global-theme-color);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.q-btn:hover {
+  background: var(--global-hover-color);
+  transform: translateY(-1px);
+}
+.q-location {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+}
+
+/* Main column */
+.q-main h2.q-section {
+  font-size: 1.45rem;
+  margin: 2.6rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  position: relative;
+}
+.q-main h2.q-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 48px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--global-theme-color);
+}
+.q-main h2.q-section a {
+  color: inherit;
+}
+.q-main h2.q-section:first-child {
+  margin-top: 0;
+}
+.q-main > .q-bio p {
+  font-size: 1.02rem;
+}
+.q-callout {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--global-theme-color);
+  background: var(--q-accent-soft);
+}
+.q-callout p {
+  margin: 0;
+}
+.q-variants {
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+}
+
+/* News as a timeline */
+.q-main .news table td,
+.q-main .news table th {
+  border: none;
+  padding: 0.45rem 0.5rem 0.45rem 0;
+  vertical-align: top;
+}
+.q-main .news table th {
+  width: 7.5rem;
+  white-space: nowrap;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+  padding-top: 0.6rem;
+}
+.q-main .news table tr + tr td,
+.q-main .news table tr + tr th {
+  border-top: 1px dashed var(--global-divider-color);
+}
+
+/* Publications */
+.publications ol.bibliography li {
+  border-radius: 12px;
+  padding: 0.5rem 0;
+}
+.publications .abbr .badge {
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.publications .links a.btn {
+  border-radius: 999px;
+  border-color: var(--global-divider-color) !important;
+  color: var(--global-theme-color) !important;
+}
+.publications .links a.btn:hover {
+  background: var(--global-theme-color);
+  color: #fff !important;
+  border-color: var(--global-theme-color) !important;
+}
+.publications h2.bibliography {
+  color: var(--global-theme-color);
+  opacity: 0.35;
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+/* Project cards */
+.projects .card {
+  border-radius: 14px;
+  border: 1px solid var(--q-card-border);
+  box-shadow: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.projects .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -20px rgba(139, 30, 63, 0.5);
+}
+.projects .card-title {
+  font-size: 1.45rem;
+  color: var(--global-theme-color);
+}
+.projects h2.category {
+  color: var(--global-theme-color);
+  opacity: 0.4;
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .q-profile-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+  .q-sidebar {
+    position: static;
+  }
+}

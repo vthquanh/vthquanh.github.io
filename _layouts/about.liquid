@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{% comment %}
+  Custom About layout: sticky profile sidebar (left) + content (right).
+  Overrides the al_folio_core about layout.
+{% endcomment %}
+<div class="post q-profile-page">
+  <aside class="q-sidebar">
+    {% if page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      <div class="q-avatar">
+        {% include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes="170px" alt=site.title cache_bust=true %}
+      </div>
+    {% endif %}
+    <h1 class="q-name">{{ site.title }}</h1>
+    {% if page.profile.name_native %}<div class="q-name-vi">{{ page.profile.name_native }}</div>{% endif %}
+    {% if page.subtitle %}<div class="q-role">{{ page.subtitle }}</div>{% endif %}
+    {% if page.profile.tags %}
+      <div class="q-tags">
+        {% for tag in page.profile.tags %}<span>{{ tag }}</span>{% endfor %}
+      </div>
+    {% endif %}
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% social_links %}</div>
+      </div>
+    {% endif %}
+    {% if page.profile.cv %}
+      <a class="q-btn" href="{{ page.profile.cv | relative_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+    {% endif %}
+    {% if page.profile.location %}
+      <div class="q-location"><i class="fa-solid fa-location-dot"></i> {{ page.profile.location }}</div>
+    {% endif %}
+  </aside>
+
+  <div class="q-main">
+    <h2 class="q-section">About</h2>
+    <div class="q-bio">{{ content }}</div>
+
+    {% if page.announcements and page.announcements.enabled %}
+      <h2 class="q-section"><a href="{{ '/news/' | relative_url }}">News</a></h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    {% if page.selected_papers %}
+      <h2 class="q-section"><a href="{{ '/publications/' | relative_url }}">Selected Publications</a></h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+  </div>
+</div>

@@ -3,25 +3,23 @@ layout: about
 title: about
 permalink: /
 subtitle: >
-  Researcher, <a href="https://hcmut.edu.vn/">Logistics System Lab, Ho Chi Minh City University of Technology (HCMUT)</a> ·
-  M.Eng. in Logistics &amp; Supply Chain Management, <a href="https://hcmiu.edu.vn/">Ho Chi Minh City International University (HCMIU)</a>
+  Researcher, <a href="https://hcmut.edu.vn/">Logistics System Lab, HCMUT</a><br>
+  M.Eng., <a href="https://hcmiu.edu.vn/">HCMIU</a> · Vietnam National University – HCMC
 
 profile:
-  align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Võ Thị Hoàng Quanh</p>
-    <p>Logistics System Lab, HCMUT</p>
-    <p>Ho Chi Minh City, Vietnam</p>
+  name_native: Võ Thị Hoàng Quanh
+  tags: [Operations Research, Scheduling, Optimization, Metaheuristics, Sustainable Operations]
+  cv: /assets/pdf/Vo_Thi_Hoang_Quanh_CV.pdf
+  location: Ho Chi Minh City, Vietnam
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: true # includes social icons in the sidebar
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 10 # leave blank to include all the news in the `_news` folder
+  scrollable: false
+  limit: 6 # the full list is on the /news/ page
 
 latest_posts:
   enabled: false
@@ -33,11 +31,11 @@ My research builds **mathematical optimization models (MILP) and metaheuristic a
 
 Before graduate school, I earned a B.Eng. in Logistics and Supply Chain Management from HCMUT, where my Six Sigma thesis received the highest score in my cohort and became a first-author Springer publication. I have worked as a process and operations engineering intern at **Intel Vietnam**, a research assistant at Saigon International University, and a teaching assistant for _AI Applications in Logistics and Supply Chain Optimization_. In 2026 I was a fully funded **Taiwan Experience Education Programme (TEEP)** fellow at Yuan Ze University.
 
-<div markdown="1" style="border-left: 4px solid var(--global-theme-color); padding: 0.75rem 1rem; margin: 1rem 0; background: var(--global-code-bg-color);">
+<div class="q-callout" markdown="1">
 **I am seeking fully-funded PhD positions starting Fall 2027** in operations research, scheduling and optimization. Please feel free to [contact me](mailto:vthquanh@gmail.com).
 </div>
 
-<p class="small text-muted">Name variants: Vo Thi Hoang Quanh · Võ Thị Hoàng Quanh · Quanh Vo · V. T. H. Quanh</p>
+<p class="q-variants">Also known as: Võ Thị Hoàng Quanh · Quanh Vo · V. T. H. Quanh</p>
 
 <script type="application/ld+json">
 {
