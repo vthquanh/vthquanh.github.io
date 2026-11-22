@@ -19,9 +19,22 @@ Ho Chi Minh City University of Technology (HCMUT), Vietnam · Jun 2026 – prese
 
 Guide new undergraduate lab members in research methods, systematic literature reviews and critical reading of scientific papers under the supervisor's direction.
 
-#### Textbook
+#### Textbook — _Quản trị dịch vụ Logistics_ (Logistics Service Management)
 
-Co-author of _Logistics Service Management_ (Saigon International University, 2025), the official textbook for a 3-credit undergraduate course in Logistics and Supply Chain Management.
+Dinh Ba Hung Anh (editor-in-chief), Doan Nam Hai and **Vo Thi Hoang Quanh**. Saigon International University, 2025 (in Vietnamese).
+
+This is the official textbook for a 3-credit undergraduate course in Logistics and Supply Chain Management. It runs to about 1,400 pages and moves from foundations to applied decisions and long-term strategy. It covers ten chapters:
+
+1. Overview: history, logistics decisions, costs, trends, careers and certifications
+2. Customer service: service levels, five-gap model, poka-yoke, benchmarking, reverse logistics
+3. Warehousing
+4. Customs declaration
+5. Transportation
+6. Logistics information systems
+7. Retail logistics
+8. Humanitarian logistics
+9. Logistics strategy
+10. Performance: KPIs and continuous improvement
 
 #### Student tutoring
 
