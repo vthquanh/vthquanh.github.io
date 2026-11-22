@@ -1,6 +1,6 @@
 # vthquanh.github.io
 
-Personal academic website of **Vo Thi Hoang Quanh** (Võ Thị Hoàng Quanh) — https://vthquanh.github.io
+Personal academic website of **Vo Thi Hoang Quanh** — https://vthquanh.github.io
 
 Built with [Jekyll](https://jekyllrb.com/) and the [al-folio](https://github.com/alshedivat/al-folio) theme, deployed to GitHub Pages by `.github/workflows/deploy.yml`.
 

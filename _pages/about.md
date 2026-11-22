@@ -8,7 +8,6 @@ subtitle: >
 
 profile:
   image: prof_pic.jpg
-  name_native: Võ Thị Hoàng Quanh
   tags: [Operations Research, Scheduling, Optimization, Metaheuristics, Sustainable Operations]
   cv: /assets/pdf/Vo_Thi_Hoang_Quanh_CV.pdf
   location: Ho Chi Minh City, Vietnam
@@ -35,14 +34,14 @@ Before graduate school, I earned a B.Eng. in Logistics and Supply Chain Manageme
 **I am seeking fully-funded PhD positions starting Fall 2027** in operations research, scheduling and optimization. Please feel free to [contact me](mailto:vthquanh@gmail.com).
 </div>
 
-<p class="q-variants">Also known as: Võ Thị Hoàng Quanh · Quanh Vo · V. T. H. Quanh</p>
+<p class="q-variants">Also known as: Quanh Vo · V. T. H. Quanh</p>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Vo Thi Hoang Quanh",
-  "alternateName": ["Võ Thị Hoàng Quanh", "Quanh Vo", "Quanh Vo Thi Hoang", "V. T. H. Quanh", "VTH Quanh", "Quanh Audrey Vo"],
+  "alternateName": ["Quanh Vo", "Quanh Vo Thi Hoang", "V. T. H. Quanh", "VTH Quanh", "Quanh Audrey Vo"],
   "givenName": "Quanh",
   "familyName": "Vo",
   "url": "https://vthquanh.github.io/",

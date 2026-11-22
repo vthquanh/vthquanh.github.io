@@ -2,9 +2,13 @@
 layout: page
 title: Digital twin for manufacturing
 description: Emulate3D + PLC digital twin of a production line — ASU eProjects competition winner (2023)
+img: assets/img/projects/digital_twin_team.jpg
 importance: 6
 category: operations
 ---
+
+{% include figure.liquid loading="eager" path="assets/img/projects/digital_twin_team.jpg" title="Digital Twin team at the ASU eProjects final" class="img-fluid rounded z-depth-1" %}
+<div class="caption">Our team at the final round and product showcase of the ASU eProjects competition, 2023. Photo: <a href="https://tuoitre.vn/khoahocphothong/song-sinh-ky-thuat-so-giup-sinh-vien-truong-dh-bach-khoa-tp-hcm-gianh-chien-thang-1042806.htm">Tuổi Trẻ – Khoa học phổ thông</a>.</div>
 
 As an undergraduate at HCMUT, I was part of a five-student interdisciplinary team (mechatronics and logistics) that built a **digital twin for mechanical manufacturing**. The system is a virtual prototype of a production system in **Emulate3D** that runs real control logic from **programmable logic controllers (PLCs)** and robot programs. Engineers can use it to detect mismatches between the system design and the system's actual behaviour before physical commissioning.
 

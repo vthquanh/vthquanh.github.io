@@ -364,3 +364,120 @@ footer.sticky-bottom {
     position: static;
   }
 }
+
+/* ---------- CV page ---------- */
+.cv-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+}
+.cv-toolbar .q-btn {
+  margin-top: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cv-updated {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+.cv-sheet {
+  border: 1px solid var(--q-card-border);
+  border-radius: 16px;
+  background: var(--global-card-bg-color);
+  padding: 2.5rem 2.75rem;
+  box-shadow: 0 10px 30px -22px rgba(139, 30, 63, 0.45);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.cv-head {
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--global-theme-color);
+}
+.cv-name {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+}
+.cv-interests {
+  margin: 0.3rem 0 0.6rem;
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+}
+.cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.2rem;
+  font-size: 0.88rem;
+}
+.cv-sheet h2.cv-h1 {
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  color: var(--global-theme-color);
+  margin: 1.8rem 0 0.7rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.cv-sheet h3.cv-h2 {
+  font-size: 1rem;
+  margin: 1.1rem 0 0.4rem;
+  color: var(--global-text-color);
+}
+.cv-p {
+  margin: 0.35rem 0;
+}
+.cv-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cv-date {
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+}
+.cv-list {
+  margin: 0.2rem 0 0.5rem;
+  padding-left: 1.3rem;
+}
+.cv-list li {
+  margin: 0.15rem 0;
+}
+@media (max-width: 640px) {
+  .cv-sheet {
+    padding: 1.5rem 1.1rem;
+  }
+  .cv-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .cv-date {
+    white-space: normal;
+  }
+  .cv-name {
+    font-size: 1.45rem;
+  }
+  .cv-updated {
+    font-size: 0.8rem;
+  }
+}
+@media print {
+  .cv-toolbar,
+  .navbar,
+  footer {
+    display: none !important;
+  }
+  .cv-sheet {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}
