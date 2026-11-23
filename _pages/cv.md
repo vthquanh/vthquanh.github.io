@@ -8,7 +8,7 @@ description: Curriculum vitae of Vo Thi Hoang Quanh.
 ---
 
 <div class="cv-toolbar">
-  <span class="cv-updated">Last updated: November 2026</span>
+  <span class="cv-updated">Last updated: 23 November 2026</span>
   <a class="q-btn" href="{{ '/assets/pdf/Vo_Thi_Hoang_Quanh_CV.pdf' | relative_url }}" target="_blank" rel="noopener" download>
     <i class="fa-solid fa-file-arrow-down"></i> Download PDF
   </a>

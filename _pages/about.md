@@ -24,7 +24,7 @@ latest_posts:
   enabled: false
 ---
 
-I am a researcher in **operations research and production scheduling** at the Logistics System Lab, Ho Chi Minh City University of Technology (HCMUT), Vietnam National University – Ho Chi Minh City. I recently completed my **Master of Engineering in Logistics and Supply Chain Management** at Ho Chi Minh City International University (HCMIU) on a full-tuition admissions scholarship, defending my thesis on _hierarchical energy-efficient scheduling in semiconductor assembly and test hybrid flow shops_ in November 2026 under the supervision of Assoc. Prof. Phan Nguyen Ky Phuc.
+I am a researcher in **operations research and production scheduling** at the Logistics System Lab, Ho Chi Minh City University of Technology (HCMUT), Vietnam National University – Ho Chi Minh City. I am completing my **Master of Engineering in Logistics and Supply Chain Management** at Ho Chi Minh City International University (HCMIU) on a full-tuition admissions scholarship (degree expected December 2026). On 17 November 2026 I defended my thesis on _hierarchical energy-efficient scheduling in semiconductor assembly and test hybrid flow shops_, supervised by Assoc. Prof. Phan Nguyen Ky Phuc.
 
 My research builds **mathematical optimization models (MILP) and metaheuristic algorithms** for complex manufacturing and logistics systems, with a focus on **sustainable and human-centric operations** (Industry 5.0): energy-efficient scheduling, batching and speed selection, and worker fatigue and rest decisions in flexible job shops. I care about reproducible computational research and release code and benchmark instances on [GitHub](https://github.com/vthquanh).
 
